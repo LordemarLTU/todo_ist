@@ -20,4 +20,4 @@
  8. Paleisti Tailwind terminale įvykdant komandą "python manage.py tailwind start".
  9. Paleisti projektą naujame terminale įvykdant komandą "python manage.py runserver" arba klaviatūroje paspaudus F5, paleistas projektas matomas naršyklėje "http://127.0.0.1:8000/" nuoroda.
 
-Paleiti testu terminale įvykdant komandą "python manage.py test".
+Paleisti testus terminale įvykdant komandą "python manage.py test".
