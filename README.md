@@ -1,3 +1,8 @@
+## Prerequisites
+Before you begin, make sure you have the following software installed on you computer:
+* Node.js: [Download and Install Node.js](https://nodejs.org/en/download).
+* Python: [Download and Install Pyton](https://www.python.org/downloads/).
+
 ## Clone the repository
 Open your terminal. Navigate to the directory where you want to store your project.
 ```bash
