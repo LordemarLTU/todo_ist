@@ -1,23 +1,73 @@
-# Instrukcija
+## Clone the repository
+Open your terminal. Navigate to the directory where you want to store your project.
+```bash
+cd /path/to/the/project/storage/location
+```
+Clone the Github repository
+```bash
+git clone https://github.com/LordemarLTU/todo_ist.git
+```
 
- 1. Parsisiųsti projektą iš Github ir atidaryti su Visual Studio Code programa.
- 2. Programoje atidaryti terminalą ir sukurti virtual environment, terminale įvykdant komandą "python -m venv virtualEnvironment".
- 3. Aktyvuoti sukurtą virtual environment, terminale įvykdant "virtualEnvironment\Scripts\activate" komandą.
- 4. Instaliuoti visus reikalingus paketus terminale įvykdant komandą "pip install -r requirements.txt".
- 5. Sukurti PostgreSQL duomenų bazę ir nurodyti prisijungimo duomenis core/settings.py faile (NAME, USER, PASSWORD, HOST, PORT laukuose [89-98 eil.])
-                        DATABASES = {
-                            'default': {
-                                'ENGINE': 'django.db.backends.postgresql',
-                                'NAME': '...',
-                                'USER': '...',
-                                'PASSWORD': '...',
-                                'HOST': '...',
-                                'PORT': '...',
-                            }
-                        }
- 6. Sukurti duomenų bazėje reikalingas lenteles, termnale įvydant komandą "python manage.py migrate".
- 7. Instaliuoti Tailwind CSS terminale įvykdant "python manage.py tailwind install".
- 8. Paleisti Tailwind terminale įvykdant komandą "python manage.py tailwind start".
- 9. Paleisti projektą naujame terminale įvykdant komandą "python manage.py runserver" arba klaviatūroje paspaudus F5, paleistas projektas matomas naršyklėje "http://127.0.0.1:8000/" nuoroda.
+## Set up a virtual environment
+Navigate to the project directory
+```bash
+cd /path/to/the/project/location
+```
+Create and activate a virtual environment
+```bash
+# On Windows
+python -m venv venv
+venv\Scripts\activate
 
-Paleisti testus terminale įvykdant komandą "python manage.py test".
+# On macOS and Linux
+python3 -m venv venv
+source venv/bin/activate
+
+## Set Up the 
+```
+
+## Install dependencies
+Install Django and other project dependencies using **`pip`**.
+```bash
+pip install -r requirements.txt
+```
+
+## Set up Tailwind CSS
+Install **`django-tailwind`**.
+```bash
+python manage.py tailwind install
+```
+
+## Set up the database
+Create a PostgreSQL database and specify the login details in the **`core/settings.py`** file.
+```bash
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': '...',
+    'USER': '...',
+    'PASSWORD': '...',
+    'HOST': '...',
+    'PORT': '...',
+  }
+}
+```
+Apply migrations to create the database schema
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+## Run the development server
+Start the **Tailwind CSS** by running the following command in new terminal.
+```bash
+python manage.py tailwind start
+```
+Start the **Django** development server.
+```bash
+python manage.py runserver
+```
+Access your application in a web browser at **`http://127.0.0.1:8000/`**.
+
+## Run tests
+Run the tests by executing the command **`python manage.py test`** in the terminal.
